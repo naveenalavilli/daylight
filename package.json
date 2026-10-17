@@ -1,0 +1,1 @@
+{"name":"daylight","version":"1.0.0","private":true,"scripts":{"dev":"node server.cjs","check":"node --check public/app.js"}}

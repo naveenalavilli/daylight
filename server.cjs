@@ -1,0 +1,3 @@
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+http.createServer((req,res)=>{const file=path.join(__dirname,'public',req.url.split('?')[0]==='/'?'index.html':req.url.split('?')[0]);if(!file.startsWith(path.join(__dirname,'public')+path.sep)){res.writeHead(403);return res.end();}fs.readFile(file,(err,data)=>{res.writeHead(err?404:200,{'Content-Type':({'html':'text/html; charset=utf-8','css':'text/css','js':'text/javascript','svg':'image/svg+xml'})[path.extname(file).slice(1)]||'text/plain'});res.end(err?'Not found':data);});}).listen(5187,'127.0.0.1',()=>console.log('Daylight: http://127.0.0.1:5187'));
+
