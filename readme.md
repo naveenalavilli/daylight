@@ -18,8 +18,6 @@ Push changes to `main`. The workflow in `.github/workflows/pages.yml` checks Jav
 
 In repository Settings → Pages, the deployment source is **GitHub Actions**. No build step, API key, or deployment secret is needed. Relative asset URLs support the `/daylight/` project path.
 
-The earlier Firebase configuration remains available in `firebase.json` as an optional deployment target; GitHub Pages is the primary host.
-
 ## Data and behavior
 
 - Tasks, habits, notes, and completed focus minutes are stored in this browser's localStorage, under `daylight-v1`. Data does not sync between devices or between the local and deployed URLs. Clearing browser data removes it.
